@@ -1,0 +1,207 @@
+:root {
+	--primary-color: #1976D2;
+	--secondary-color: #9E9E9E;
+	--tertiary-color: #FFFFFF;
+	--quaternary-color: #121212;
+	--quinary-color: #2d2d2d;
+}
+
+* {
+	margin: 8;
+	padding: 8;
+	font-family: 'Roboto', sans-serif;
+	outline: none;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #121212;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #1F1F1F;
+	padding: 30px;
+	color: #D7D7D7;
+}
+
+	.button_add_tarefa, .cad_tarefa {
+		border: none;
+		background-color: var(--primary-color);
+		color: var(--tertiary-color);
+		font-size: 16px;
+		padding: 9px 22px;
+		border-radius: 6px;
+		cursor: pointer;
+	}
+
+.container {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	align-items: baseline;
+	padding: 5px 0;
+}
+
+	.container .column {
+		width: 300px;
+		height: 600px;
+		background-color: #1D1D1D;
+		border-radius: 10px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+}
+
+			.container .column .head_1, .container .column .head_2, .container .column .head_3, .container .column .head_4 {
+			padding: 15px;
+			text-align: center;
+			border-bottom: 3px solid var(--quaternary-color);
+}
+
+			.container .column .head_1 {
+				color: #EE6E73;
+			}
+
+			.container .column .head_2 {
+				color: #eeff41;
+			}
+
+			.container .column .head_3 {
+				color: #4fc3f7;
+			}
+
+			.container .column .head_4 {
+				color: #ffd54f;
+			}
+
+			.container .column .body {
+				padding: 20px;
+				overflow-y: auto;
+			}
+
+				.container .column .body .cards_list {
+					display: flex;
+					flex-direction: column;
+				}
+
+				.container .column .body .add_btn{
+					background: none;
+					border: 1px solid;
+					border-radius: 10px;
+					padding: 5px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					cursor: pointer;
+					color: var(--secondary-color);
+				}
+
+				.container .column .body .card {
+					background-color: var(--quinary-color);
+					border-radius: 7px;
+					padding: 10px;
+					display: flex;
+					flex-direction: column;
+					gap: 10px;
+					margin-bottom: 20px;
+				}
+
+					.container .column .body .card .info {
+						font-size: 14px;
+						color: var(--secondary-color);
+						display: flex;
+						flex-direction: column;
+					}
+
+
+#modal {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+	#modal .box {
+		background-color: #1D1D1D;
+		width: 400px;
+		border-radius: 7px;
+		overflow: hidden;
+		color: #D7D7D7;
+	}
+
+		#modal .box .head {
+			display: flex;
+			justify-content: space-between;
+			padding: 14px 20px;
+			border-bottom: 1px solid #DDD;
+			color: #D7D7D7;
+			align-items: center;
+	}
+
+			#modal .box .head span {
+				font-size: 18px;
+				font-weight: 700;
+				color: #D7D7D7;
+			}
+
+			#modal .box .head button {
+				border: none;
+				background: none;
+				font-size: 24px;
+				font-weight: 700;
+				color: #EE6E73;
+				cursor: pointer;
+			}
+
+		#modal .box .form {
+			padding: 20px 20px 0px 20px;
+		}
+
+		#modal .box .form-group {
+			margin-bottom: 15px;
+		}
+
+			#modal .box .form label {
+				display: block;
+				font-size: 14px;
+				color: #D7D7D7;
+				margin-bottom: 5px;
+			}
+
+			#modal .box .form textarea, #modal .box .form select, #modal .box .form input {
+				background-color: var(--tertiary-color);
+				width: 100%;
+				border-radius: 7px;
+				font-size: 14px;
+				color: var(--quaternary-color);
+				border: 1px solid var(--primary-color);
+			}
+
+			#modal .box .form textarea {
+				padding: 15px 15px;
+				margin-bottom: -20px;
+			}
+			#modal .box .form select {
+				padding: 10px;
+			}
+
+			#modal .box .form input {
+				padding: 10px;
+				border-radius: 7px;
+			}
+
+		.cad_tarefa {
+			margin-bottom: 15px;
+			display: block;
+			margin-left: auto;
+		}
